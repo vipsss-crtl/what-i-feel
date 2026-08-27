@@ -53,8 +53,8 @@ dependsBtn.addEventListener("click", () => {
 });
 
 const revealLines = [
-  '"Achi friend hai bas."',
-  '"Acha friend hai."',
+  '"Best friend hai bas."',
+  '"Achi friend hai."',
   '"Yaar iske message ka wait kyun kar raha hoon?" 🤡',
   '"Ye online aayi kya?" 👀',
   '"Aaj reply late kyun hai?" 😭',
