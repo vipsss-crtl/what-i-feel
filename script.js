@@ -86,31 +86,22 @@ const responseLabels = {
   friend: "Pagal hai tu 😂"
 };
 
-async function sendResponse(choiceKey) {
-  try {
-    const response = await fetch(`https://formsubmit.co/ajax/${responseEmail}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      body: JSON.stringify({
-        _subject: "💌 New response from What-I-Feel",
-        answer: responseLabels[choiceKey],
-        answer_key: choiceKey,
-        submitted_at: new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
-        _template: "table"
-      })
-    });
+function sendResponse(choiceKey) {
+  const whatsappNumber = "919148265307"; // Put your WhatsApp number here
 
-    if (!response.ok) {
-      console.warn("Response email could not be sent.");
-    }
-  } catch (error) {
-    console.warn("Response email could not be sent:", error);
-  }
+  const message =
+    `💌 New response from What-I-Feel\n\n` +
+    `Answer: ${responseLabels[choiceKey]}\n` +
+    `Option: ${choiceKey}\n\n` +
+    `Time: ${new Date().toLocaleString("en-IN", {
+      timeZone: "Asia/Kolkata"
+    })}`;
+
+  const whatsappURL =
+    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappURL, "_blank");
 }
-
 document.querySelectorAll(".choice").forEach(choice => {
   choice.addEventListener("click", () => {
     const selectedChoice = choice.dataset.choice;
