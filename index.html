@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oye... Ek Baat Bolu? 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="hearts"></div>
+
+  <main class="app">
+    <div class="progress"><span id="progressBar"></span></div>
+
+    <section class="screen active" data-screen="1">
+      <div class="emoji">👀</div>
+      <p class="eyebrow">OYE, SUN NA</p>
+      <h1>Ek baat bolu?</h1>
+      <p class="subtitle">Sunegi?</p>
+      <div class="buttons">
+        <button id="yesBtn" class="btn primary">Haan bol 😌</button>
+        <button id="noBtn" class="btn secondary">Nahi 😭</button>
+      </div>
+      <p id="noMessage" class="tiny">PS: "Nahi" dabane ke consequences hain. 💀</p>
+    </section>
+
+    <section class="screen" data-screen="2">
+      <div class="emoji">🤞</div>
+      <p class="eyebrow">OKAYYY...</p>
+      <h2>Pehle ek promise kar.</h2>
+      <p class="body">Judge nahi karegi.<br>Matlab... thoda awkward ho sakta hai. 😭</p>
+      <div class="buttons">
+        <button class="btn primary next">Promise 🤞</button>
+        <button id="dependsBtn" class="btn secondary">Depends... 💀</button>
+      </div>
+      <p id="dependsMessage" class="tiny"></p>
+    </section>
+
+    <section class="screen" data-screen="3">
+      <div class="emoji">💀</div>
+      <p class="eyebrow">CONFESSION.EXE</p>
+      <h2>Ye WhatsApp pe bol sakta tha...</h2>
+      <p class="body">Par nahi.<br>Mere dimaag ne bola — <b>"Website bana dete hain."</b></p>
+      <div class="loading-card">
+        <p>Loading confidence...</p>
+        <div class="loader"><span></span></div>
+        <div class="stats">
+          <span>Confidence <b>2%</b> 😭</span>
+          <span>Overthinking <b>9999%</b> 💀</span>
+        </div>
+      </div>
+      <button class="btn primary next">Proceed anyway →</button>
+    </section>
+
+    <section class="screen" data-screen="4">
+      <div class="emoji">🫶</div>
+      <p class="eyebrow">THODI SI BAAT</p>
+      <h2>Tu na... thodi alag hai.</h2>
+      <div class="cards">
+        <div class="mini-card">📱 Random texts bhi interesting bana deti hai.</div>
+        <div class="mini-card">😂 Mere bakwaas jokes pe bhi hasi aa jaati hai.</div>
+        <div class="mini-card">🙄 Kabhi kabhi irritate bhi karti hai... thoda zyada.</div>
+        <div class="mini-card">❤️ But still, tujhe ignore karna impossible lagta hai.</div>
+      </div>
+      <button class="btn primary next">Aage sun 👀</button>
+    </section>
+
+    <section class="screen" data-screen="5">
+      <div class="emoji">🤨</div>
+      <p class="eyebrow">THEN IT HIT ME</p>
+      <h2>Ek din mujhe laga...</h2>
+      <div id="reveal" class="reveal-box">
+        <p id="revealText">"Best friend hai bas."</p>
+        <button id="revealBtn" class="btn primary">Next 👀</button>
+      </div>
+    </section>
+
+    <section class="screen confession" data-screen="6">
+      <div class="emoji">❤️</div>
+      <p class="eyebrow">THE ACTUAL THING</p>
+      <h2>Toh bina filmy dialogue ke...</h2>
+      <p class="body">Seedha bolta hoon.</p>
+      <div class="big-confession">Mujhe tu pasand hai. ❤️</div>
+      <p class="tiny">Haan... ye bolne mein expected se zyada time lag gaya. 😭</p>
+      <button class="btn primary next">Tujhe pehle se pata tha... but I still wanted to say it one more time properly.</button>
+    </section>
+
+    <section class="screen" data-screen="7">
+      <div class="emoji">🫶</div>
+      <p class="eyebrow">NO PRESSURE</p>
+      <h2>Bas ek cheez...</h2>
+      <p class="body">
+        Tujhe abhi answer dena zaroori nahi hai.<br><br>
+        Awkward feel karne ki bhi zaroorat nahi.<br><br>
+        Bas dil mein tha, isliye bata diya. ❤️
+      </p>
+      <div class="terms">Friendship downgrade nahi hogi.<br><small>(Terms and Conditions apply.) 😂</small></div>
+      <button class="btn primary next">Ab honestly bata 👀</button>
+    </section>
+
+    <section class="screen" data-screen="8">
+      <div class="emoji">💌</div>
+      <p class="eyebrow">YOUR TURN</p>
+      <h2>Ab honestly bata...</h2>
+      <p class="subtitle">Kya soch rahi hai? 👀</p>
+      <div class="choice-grid">
+        <button class="choice" data-choice="like">Hmmm... mujhe bhi kuch kehna hai. 🩷</button>
+        <button class="choice" data-choice="time">Mujhe time chahiye. 💜</button>
+        <button class="choice" data-choice="friend">Pagal hai tu 😂</button>
+      </div>
+      <div id="finalMessage" class="final-message hidden"></div>
+      <button id="restart" class="btn secondary hidden">Phir se shuru kare? ↻</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
