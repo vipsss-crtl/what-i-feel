@@ -81,7 +81,7 @@ const finalMessages = {
 const responseEmail = "vipulkatamble07@gmail.com";
 
 const responseLabels = {
-  like: "Hmmm... mujhe bhi kuch kehna hai. 🩷",
+  like: "Okay... I think I like you too. 🥹❤️",
   time: "Mujhe time chahiye. 💜",
   friend: "Pagal hai tu 😂"
 };
