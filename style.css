@@ -39,10 +39,16 @@ body {
   to { transform:translateY(-115vh) rotate(25deg); opacity:0; }
 }
 .app {
-  position:relative; z-index:1; width:min(92vw, 720px); height:min(90vh, 760px);
-  border:1px solid rgba(255,255,255,.7); border-radius:32px;
-  background:rgba(255,250,248,.66); backdrop-filter:blur(20px);
-  box-shadow:0 25px 80px rgba(113,82,117,.16); overflow:hidden;
+  position: relative;
+  z-index: 1;
+  width: min(92vw, 720px);
+  height: min(90vh, 760px);
+  border: 1px solid rgba(255,255,255,.7);
+  border-radius: 32px;
+  background: rgba(255,250,248,.66);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 25px 80px rgba(113,82,117,.16);
+  overflow: hidden;
 }
 .progress { position:absolute; top:0; left:0; right:0; height:4px; background:rgba(255,255,255,.45); }
 .progress span { display:block; width:12.5%; height:100%; background:linear-gradient(90deg,var(--pink),var(--lavender)); transition:.5s; }
