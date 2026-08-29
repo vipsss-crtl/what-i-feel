@@ -58,7 +58,8 @@ const revealLines = [
   '"Yaar iske message ka wait kyun kar raha hoon?" 🤡',
   '"Ye online aayi kya?" 👀',
   '"Aaj reply late kyun hai?" 😭',
-  'Bhai... kuch toh gadbad hai. 💀'
+  '"Okay... I think I like her." ❤️',
+  '"Nahi... I don\'t just like her."'
 ];
 let revealIndex = 0;
 const revealText = document.getElementById("revealText");
