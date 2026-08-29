@@ -22,7 +22,13 @@ body {
     radial-gradient(circle at 85% 80%, rgba(185,168,232,.55), transparent 35%),
     linear-gradient(135deg,#fff7f4,#f7f1ff);
 }
-#hearts { position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:0; }
+#hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 2;
+}
 .float-heart {
   position:absolute;
   bottom:-40px;
