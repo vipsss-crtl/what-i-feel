@@ -88,15 +88,55 @@ const responseLabels = {
 };
 
 function sendResponse(choiceKey) {
-  const whatsappNumber = "919148265307"; // Put your WhatsApp number here
+
+  // Convert "Love" from HTML into "like" for the JavaScript data
+  if (choiceKey === "Love") {
+    choiceKey = "like";
+  }
+
+  const answer = responseLabels[choiceKey];
 
   const message =
     `💌 New response from What-I-Feel\n\n` +
-    `Answer: ${responseLabels[choiceKey]}\n` +
+    `Answer: ${answer}\n` +
     `Option: ${choiceKey}\n\n` +
     `Time: ${new Date().toLocaleString("en-IN", {
       timeZone: "Asia/Kolkata"
     })}`;
+
+  // =========================
+  // 1. SEND EMAIL AUTOMATICALLY
+  // =========================
+
+  fetch("https://formsubmit.co/ajax/vipulkatamble07@gmail.com", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({
+      subject: "💌 New What-I-Feel Response",
+      answer: answer,
+      option: choiceKey,
+      submitted_at: new Date().toLocaleString("en-IN", {
+        timeZone: "Asia/Kolkata"
+      })
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log("Email sent:", data);
+  })
+  .catch(error => {
+    console.error("Email error:", error);
+  });
+
+
+  // =========================
+  // 2. OPEN WHATSAPP
+  // =========================
+
+  const whatsappNumber = "919148265307";
 
   const whatsappURL =
     `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
