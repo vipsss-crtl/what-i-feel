@@ -7,8 +7,8 @@ let noClicks = 0;
 const noMessages = [
   "Arey sun toh le yaar 😭",
   "Ek baar sunne mein kya jaa raha hai tera? 👀",
-  "Itna attitude? Main note kar raha hoon. ✍️😂",
-  "YES button dekh... gym jaake bada ho gaya hai. 💪😭",
+  "Itna attitude? Abhi toh tera game bajana padega. 😂💀",
+  "Ab bas kar bhai... mujhe hi daba de na! 😭💀",
   "Theek hai... ab drama band kar aur Haan dabaa. 🤨🩷"
 ];
 
