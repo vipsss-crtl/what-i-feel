@@ -89,20 +89,20 @@ const responseLabels = {
 
 function sendResponse(choiceKey) {
 
-  // Convert "Love" from HTML into "like" for the JavaScript data
-  if (choiceKey === "Love") {
-    choiceKey = "like";
-  }
+  // Convert the selected choice to lowercase
+  choiceKey = choiceKey.toLowerCase();
 
-  const answer = responseLabels[choiceKey];
+  const answer = responseLabels[choiceKey] || choiceKey;
+
+  const currentTime = new Date().toLocaleString("en-IN", {
+    timeZone: "Asia/Kolkata"
+  });
 
   const message =
     `💌 New response from What-I-Feel\n\n` +
     `Answer: ${answer}\n` +
     `Option: ${choiceKey}\n\n` +
-    `Time: ${new Date().toLocaleString("en-IN", {
-      timeZone: "Asia/Kolkata"
-    })}`;
+    `Time: ${currentTime}`;
 
   // =========================
   // 1. SEND EMAIL AUTOMATICALLY
@@ -118,9 +118,7 @@ function sendResponse(choiceKey) {
       subject: "💌 New What-I-Feel Response",
       answer: answer,
       option: choiceKey,
-      submitted_at: new Date().toLocaleString("en-IN", {
-        timeZone: "Asia/Kolkata"
-      })
+      submitted_at: currentTime
     })
   })
   .then(response => response.json())
