@@ -283,3 +283,43 @@ h2 { font-size:clamp(32px,6vw,50px); }
     font-size: 30px;
   }
 }
+.before-choice-message {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 18px 20px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  backdrop-filter: blur(10px);
+
+  line-height: 1.6;
+
+  text-align: left;
+
+  animation: messageAppear 0.7s ease;
+}
+
+.before-choice-message p {
+  margin: 0;
+}
+
+.before-choice-message strong {
+  font-size: 1.1rem;
+}
+
+@keyframes messageAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
