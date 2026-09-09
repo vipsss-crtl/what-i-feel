@@ -8,7 +8,7 @@ const noMessages = [
   "Arey sun toh le yaar 😭",
   "Ek baar sunne mein kya jaa raha hai tera? 👀",
   "Itna attitude? Abhi toh tera game bajana padega. 😂💀",
-  "Ab bas kar bhai... mujhe hi daba de na! 😭💀",
+  "Ab bas kar bhai... aur bada hua na toh screen se bahar aa jaunga! 😭💀",
   "Theek hai... ab drama band kar aur Haan dabaa. 🤨🩷"
 ];
 
